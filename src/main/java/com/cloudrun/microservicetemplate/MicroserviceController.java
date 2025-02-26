@@ -22,9 +22,12 @@ import org.slf4j.MDC;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
 
 /** Example REST controller to demonstrate structured logging. */
-@RestController
+@Controller
 public class MicroserviceController {
   // 'spring-cloud-gcp-starter-logging' module provides support for
   // associating a web request trace ID with the corresponding log entries.
@@ -33,7 +36,7 @@ public class MicroserviceController {
 
   /** Example endpoint handler. */
   @GetMapping("/")
-  public @ResponseBody String index() {
+  public String index() {
     // Example of structured logging - add custom fields
     MDC.put("logField", "custom-entry");
     MDC.put("arbitraryField", "custom-entry");
