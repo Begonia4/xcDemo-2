@@ -8,6 +8,8 @@ import java.util.concurrent.atomic.AtomicLong;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/* 
+
 @SpringBootApplication
 @RestController
 public class WarApplication {
@@ -16,7 +18,7 @@ public class WarApplication {
 	public String display() {
 		return "Hello Apache Tomcat using the Spring Boot Application";
 	}
-	/* 
+	 
 	private static final String template = "Hello, %s!";
 	private final AtomicLong counter = new AtomicLong();
 
@@ -31,10 +33,11 @@ public class WarApplication {
         
         return ResponseEntity.status(HttpStatus.CREATED).body(result);
     }
-	*/
+	
 
 	public static void main(String[] args) {
 		SpringApplication.run(WarApplication.class, args);
 	}
 
 }
+*/
