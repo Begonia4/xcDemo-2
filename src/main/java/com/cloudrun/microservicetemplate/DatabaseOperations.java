@@ -235,7 +235,7 @@ public class DatabaseOperations {
     
     // Adding the meet column
     public static String insertMeetName(Connection conn, ArrayList<Milesplits.Data> athleteArray) {
-        String sql = "ALTER TABLE athletes ADD " + athleteArray.get(0).meetName().replaceAll(" ", "_") +  " varchar(255)";
+        String sql = "ALTER TABLE athletes ADD " + athleteArray.get(0).meetName().replaceAll("[^a-zA-Z0-9_]","_") +  " varchar(255)";
         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.executeUpdate();
             return "Success";

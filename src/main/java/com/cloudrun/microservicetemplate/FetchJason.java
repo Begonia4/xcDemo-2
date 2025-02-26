@@ -39,7 +39,7 @@ public class FetchJason {
 
         try (Connection conn = dataSource.getConnection()) {
             ArrayList<Milesplits.Data> result = TestingMilesplit.listMilesplit(api, schoolName);
-            String meetName = result.get(0).meetName().replaceAll(" ", "_");
+            String meetName = result.get(0).meetName().replaceAll("[^a-zA-Z0-9_]","_");
             ArrayList<String> athleteArray = DatabaseOperations.athleteArray(result);
             DatabaseOperations.validateAthletes(conn, athleteArray);
             DatabaseOperations.insertMeetName(conn, result);
