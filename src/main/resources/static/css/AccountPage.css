@@ -15,14 +15,6 @@ button:active {
     background-color: greenyellow;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    background-color: black;
-    color: white;
-    height: 10vh;
-}
-
 @media screen and (max-width: 900px) {
 
     nav {
@@ -34,8 +26,8 @@ nav {
     }
 
     header {
-        height: 40vh;
-        width: 90vw;
+        height: 300px;
+        width: 500px;
         overflow: scroll;
         padding: 10px;
         font-size: 30px;
@@ -54,6 +46,13 @@ nav {
     }
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 10vh;
+}
 
 header {
     height: 8vh;
