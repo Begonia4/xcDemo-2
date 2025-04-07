@@ -18,7 +18,7 @@ button:active {
 @media screen and (max-width: 900px) {
 
     nav {
-        height: 0vh;
+        visibility: hidden;
     }
 
     img {
@@ -43,6 +43,10 @@ button:active {
 
     form {
         padding: 5px;
+    }
+
+    .quote {
+        visibility: hidden;
     }
 }
 
