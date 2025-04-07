@@ -9,8 +9,8 @@ public class CloudSqlConnectionPoolFactory {
   public static DataSource createConnectionPool() {
     String DB_NAME = "helloworld";
     String DB_USER = "root";
-    String DB_PASS = "V!s4f@cA0(6)";
-    String INSTANCE_CONNECTION_NAME = "neon-lock-454313-h0:us-central1:th34msrx";
+    String DB_PASS = "V!s4f@cA0(6";
+    String INSTANCE_CONNECTION_NAME = "neon-lock-454313-h0:us-central1:th34msr";
      
     HikariConfig config = new HikariConfig();
     config.setJdbcUrl(String.format("jdbc:mysql:///" + DB_NAME));
